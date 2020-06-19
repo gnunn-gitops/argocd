@@ -19,7 +19,7 @@ oc get crd | grep argo
 
 echo "Deploying Argo CD instance"
 
-oc apply -k argocd/overlays/default
+oc apply -k argocd/overlays/userrole
 
 echo "Waiting for Argo CD server to start..."
 
