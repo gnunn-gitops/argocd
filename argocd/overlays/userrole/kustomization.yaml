@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- https://github.com/redhat-canada-gitops/argocd//argocd/overlays/default
+
+patchesStrategicMerge:
+- user-role-patch.yaml
