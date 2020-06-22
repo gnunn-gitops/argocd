@@ -23,7 +23,7 @@ oc apply -k argocd/overlays/userrole
 
 echo "Waiting for Argo CD server to start..."
 
-sleep 20
+sleep 30
 
 oc rollout status deploy/argocd-server -n argocd
 
