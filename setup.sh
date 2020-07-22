@@ -8,8 +8,8 @@ echo "Installing Argo CD Operator."
 
 oc apply -k https://github.com/redhat-canada-gitops/argocd/argocd-operator/overlays/default
 
-echo "Pause 20 seconds for the creation and approval of the InstallPlan."
-sleep 20
+echo "Pause 30 seconds for the creation and approval of the InstallPlan."
+sleep 30
 
 oc rollout status deploy/argocd-operator -n argocd
 
