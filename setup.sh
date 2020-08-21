@@ -4,6 +4,12 @@ LANG=C
 SLEEP_SECONDS=45
 
 echo ""
+echo "Creating ArgoCD Project"
+# Avoids weird race condition where sometimes two installplans get created
+oc new-project argocd
+sleep 2
+
+echo ""
 echo "Installing Argo CD Operator."
 
 oc apply -k https://github.com/redhat-canada-gitops/argocd/argocd-operator/overlays/default
